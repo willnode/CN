@@ -1,0 +1,11 @@
+site_name: Coding Notes
+theme: 
+  name: material
+  palette:
+    primary: teal
+    accent: indigo
+  localization: id
+repo_name: 'willnode/CN'
+repo_url: 'https://github.com/willnode/CN'
+extra_css:
+  - https://fonts.googleapis.com/icon?family=Material+Icons
