@@ -70,3 +70,5 @@ Well, during `accept()`, all `client_fd.connection.packets` will be moved to `ac
 ## Read() call
 
 All read() does is just reading the buffer from `self.connection.packets`, or return `EAGAIN` or `EWOULDBLOCK`. `EWOULDBLOCK` will hang the caller until it's available.
+
+You'd think if it even possible to `read()` before `accept()`, but yes you have to. You just need to block the call with `EAGAIN` or `EWOULDBLOCK` until `client_fd.connection.peer` is updated to new one.
